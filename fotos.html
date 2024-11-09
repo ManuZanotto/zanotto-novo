@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #181717;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery-item .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000000b3;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="saiba-mais1.html">
+                <img src="fotos/van branca nova.jpg" alt="Imagem 1">
+                <div class="caption">saiba mais</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="saiba-mais2.html">
+                <img src="fotos/van branca.jpg" alt="Imagem 2">
+                <div class="caption">saiba mais</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="saiba-mais3.html">
+                <img src="fotos/van preta.jpg" alt="Imagem 3">
+                <div class="caption">saiba mais</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="saiba-mais4.html">
+                <img src="fotos/spin.jpg" alt="Imagem 4">
+                <div class="caption">saiba mais</div>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="saiba-mais5.html">
+                <img src="fotos/tracker.jpg" alt="Imagem 5">
+                <div class="caption">saiba mais</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
